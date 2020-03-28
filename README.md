@@ -1,2 +1,0 @@
-# AFSFAlka.github.io
-WebSDKTest
