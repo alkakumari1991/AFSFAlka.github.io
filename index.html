@@ -42,7 +42,7 @@ p.parentNode.insertBefore(o,p)}(window,document,"script",0,"AF","pba",{pba: {web
         // using the fetch api to send the user email to the server
         // and get the unique user id in return	
         window.onload = function () {
-            var userEmail = localStorage.getItem('user_email');
+            var userEmail = localStorage.getItem('alka@gmail.com');
             fetch('users/' + userEmail).then(function (res) {
                    res.text().then(function (id) {
                     console.log(id);
