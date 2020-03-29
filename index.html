@@ -16,6 +16,9 @@ p.parentNode.insertBefore(o,p)}(window,document,"script",0,"AF","pba",{pba: {web
         }
 </script>
  
+ AF('pba', 'event', {eventType: 'IDENTIFY', customUserId:'663274'})
+
+ 
 <!-- Assume that data about products in the shopping cart
     is stored in localstorage -->
     <script>
@@ -24,7 +27,6 @@ p.parentNode.insertBefore(o,p)}(window,document,"script",0,"AF","pba",{pba: {web
                 AF('pba', 'event', {eventType: 'EVENT',eventCategory: 'conversion', eventName: 'checkout'});
             });
         }
-
     </script>
 </head>
 <body>
