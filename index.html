@@ -26,35 +26,12 @@ p.parentNode.insertBefore(o,p)}(window,document,"script",0,"AF","pba",{pba: {web
         }
     </script>
  
- <!-- Set up a signup page-->
- <script>
-        };
-    // this function stores the user email to be sent to the server after the user reaches the thank you page
-    // the response from the server is a unique user ID that we use in the IDENTIFY event type
-        function storeUserEmail (){
-            var userEmail = document.getElementById('email').value;
-            localStorage.setItem('user_email', userEmail);
+ <script>window.onload = function(){
+            AF('pba', 'event', { eventType: 'IDENTIFY', customUserId: '663274'});
         }
- </script>
-
-<!--Set up a thank you page for users who sign up: -->
- <script>
-        // using the fetch api to send the user email to the server
-        // and get the unique user id in return	
-        window.onload = function () {
-            var userEmail = localStorage.getItem('alka@gmail.com');
-            fetch('users/' + userEmail).then(function (res) {
-                   res.text().then(function (id) {
-                    console.log(id);
-                    AF('pba', 'event', { eventType: 'IDENTIFY', customUserId: '663274'});
-                });
-            });
-        }  </script> 
+</script>
  
 </head>
-  <body> 
-        <h1>Thank You for Signing Up!</h1> 
-     </body> 
  
 <body>
     <h1>Shopping Cart</h1>
@@ -77,18 +54,6 @@ p.parentNode.insertBefore(o,p)}(window,document,"script",0,"AF","pba",{pba: {web
     <button id='checkout'>Checkout</button>
 </body>
 
-<body>
-    <h1>Sign Up</h1>
-    <form onsubmit="storeUserEmail()" action="/signup" method="post">
-        <div><label>Name</label>
-            <input type="text" name="name" id="name"></div>
-        <br />
-        <div> <label>Email</label>
-            <input type="email" name="email" id="email"></div>
-        <br />
-        <input type="submit" id="submit">
-    </form>
-</body>
 
 <!-- <body>
 The content of the document......
